@@ -20,7 +20,7 @@ It nothing much, just a form that is also made and styled by **only HTML** (**No
 
 - **Date de Fin :** The end date of that FYP.
 
-- **Responsable :** The supervisor of the FYP (We used "Prof" for professors privacy).
+- **Responsable :** The supervisor of the FYP (We used "Prof" instead professors names).
 
 - **Envoyer :** A button to send the contents.
 
