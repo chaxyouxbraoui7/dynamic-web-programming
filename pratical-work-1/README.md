@@ -6,7 +6,7 @@ I am glade we made it, me and my other two colleagues.
 
 It is the schedule of the semester made and styled by **only HTML** (**No smell of CSS!**).
 
-## The Schedule used
+## The inspired schedule
 
 **if you're wondering what is the schedule, you can check it out by this drive link :**
 

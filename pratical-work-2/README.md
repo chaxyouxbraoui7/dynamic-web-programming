@@ -2,7 +2,7 @@
 
 This the 2nd pratical work.
 
-It nothing much, just a form that is also made and styled by **only HTML** (**No CSS!**).
+Just a form that is also made and styled by **only HTML** (**No CSS!**).
 
 ## It features
 
@@ -20,7 +20,7 @@ It nothing much, just a form that is also made and styled by **only HTML** (**No
 
 - **Date de Fin :** The end date of that FYP.
 
-- **Responsable :** The supervisor of the FYP (We used "Prof" instead professors names).
+- **Responsable :** The supervisor of the FYP (We used "Prof" instead professors namesk).
 
 - **Envoyer :** A button to send the contents.
 
