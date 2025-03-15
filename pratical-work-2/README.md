@@ -2,7 +2,7 @@
 
 This the 2nd pratical work.
 
-Just a form that is also made and styled by **only HTML** (**No CSS!**).
+Just a form that is also made and styled with **only HTML** (**No CSS!**).
 
 ## It features
 
@@ -28,4 +28,4 @@ Just a form that is also made and styled by **only HTML** (**No CSS!**).
 
 ## Notes
 
-**This pratical work deos not have a backend!**
+**This pratical work deos not have a back-end!**

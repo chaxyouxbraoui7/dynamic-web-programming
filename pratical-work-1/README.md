@@ -4,7 +4,7 @@ This the 1st pratical work.
 
 I am glade we made it, me and my other two colleagues.
 
-It is the schedule of the semester made and styled by **only HTML** (**No smell of CSS!**).
+It is the schedule of the semester made and styled with **only HTML** (**No smell of CSS!**).
 
 ## The inspired schedule
 

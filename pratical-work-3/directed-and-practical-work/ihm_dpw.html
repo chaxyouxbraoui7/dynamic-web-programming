@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Homme Machine</title>
+    <style>
+        body {
+            font-family: Times, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+        }
+
+        .dpw {
+            margin-bottom: 50px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: dotted;
+            border-radius: 15px;
+        }
+
+        .back-button:hover {
+            background-color: red;
+        }
+
+        #dark-mode-checkbox {
+            display: none;
+        }
+
+        .dark-mode-label {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 100px;
+            height: 30px;
+            background: #ddd;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-color: black;
+            padding: 5px;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+
+        .dark-mode-label::before {
+            content: "Dark Mode";
+            transition: all 0.3s ease;
+        }
+
+        #dark-mode-checkbox:checked ~ .main-container {
+            filter: invert(1) hue-rotate(180deg);
+        }
+
+        #dark-mode-checkbox:checked ~ .dark-mode-label {
+            background: black;
+            color: white;
+            border-color: gold;
+        }
+
+        #dark-mode-checkbox:checked ~ .back-button {
+            background-color: green;
+        }
+
+        #dark-mode-checkbox:checked ~ .back-button {
+            background-color: red;
+        }
+
+        #dark-mode-checkbox:checked ~ .dark-mode-label::before {
+            content: "Light Mode";
+            transition: all 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="dark-mode-checkbox">
+    <label for="dark-mode-checkbox" class="dark-mode-label"></label>
+    <div class="main-container">
+        <h2>Les Chapitres De Cours Du "Interface Homme Machine"</h2>
+        <div class="dpw">
+            <p><strong>Travaux Dirigés/Pratiques I :</strong>&nbsp;<a href="https://drive.google.com/file/d/1RrTiaNVqiEp8ikHfZCIw4FEf7BNW2imT/view?usp=drive_link" target="_blank">TD/TP 1</a></p>
+            <p><strong>Solution De Travaux Dirigés/Pratiques I :</strong>&nbsp;<a href="https://drive.google.com/file/d/1W6SazY6MIlfeRsJjAgFXk3J-LKYoxUko/view?usp=drive_link" target="_blank">TD/TP 1 (solution)</a></p>
+            <p><strong>Travaux Dirigés/Pratiques II :</strong>&nbsp;<a href="https://drive.google.com/file/d/1dcFGN4s1SjOvuGpB-3N5XIuMk5p84BVs/view?usp=drive_link" target="_blank">TD/TP 2</a></p>
+            <p><strong>Solution De Travaux Dirigés/Pratiques II :</strong>&nbsp;<a href="https://drive.google.com/file/d/1ZZ8CMAiBX2GKD6tg3rddIbZp9Raz2eLe/view?usp=drive_link" target="_blank">TD/TP 2 (solution)</a></p>
+            <p><strong>Travaux Dirigés/Pratiques III :</strong>&nbsp;<a href="https://drive.google.com/file/d/1cmFX6GvDO8KokKDsGAszpteSctnrs6J4/view?usp=drive_link" target="_blank">TD/TP 3</a></p>
+            <p><strong>Solution De Travaux Dirigés/Pratiques III :</strong>&nbsp;<a href="https://drive.google.com/file/d/12vrkt-ro0ANnCyqbrU7SdfAmWkCnnnSg/view?usp=drive_link" target="_blank">TD/TP 3 (solution)</a></p>
+            </div>
+        <a href="../main/schedule.html" class="back-button">Retourner à l'emploi du temps</a>
+    </div>
+</body>
+</html>
