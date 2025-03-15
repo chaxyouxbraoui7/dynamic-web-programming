@@ -13,6 +13,7 @@ The standard language for creating web pages. It structures content on the web u
 A language used to style and design HTML elements. It controls layout, colors, fonts, and responsiveness to make web pages visually appealing.
 
 - **JavaScript:**
+
 A programming language that adds interactivity to websites. It allows for dynamic content, animations, form validation, and communication with servers.
 
 - **PHP (Hypertext Preprocessor):**
