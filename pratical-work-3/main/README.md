@@ -1,6 +1,6 @@
 ## Desription
 
-This the 3rd pratical work.
+This is the 3rd pratical work.
 
 A remake of the 1st pratical work made with **HTML** and styled this time with **CSS**.
 
