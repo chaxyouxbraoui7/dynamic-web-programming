@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscription Au PFE</title>
+
+</head>
+    <body bgcolor="#355E3B" text="#FFFFFF">
+            <center>
+            <h1>Inscription au PFE pour les Étudiants du Département SMI</h1><br><br>
+            </center>
+        <p><font face="arial" size="5">Remplir Le Formulaire Suivant:</font></p><br><br>
+            <form>
+                <center>
+                    <label for="name">Nom:</label><br><br>
+                    <input type="text" id="nom" name="nom" placeholder="Votre Nom" required><br><br>
+                    <label for="prenom">Prénom:</label><br><br>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" required><br><br>
+                    <label for="group">N° de Groupe:</label><br><br>
+                    <input type="number" id="group" name="group" min="1" max="44" step="1" required><br><br>
+                    <label for="prenom">Sujet:</label><br><br>
+                    <input type="text" id="Sujet" name="Sujet" placeholder="Le Titre de Votre Sujet"><br><br>
+                    <label for="description">Description:</label><br><br><br>
+                    <textarea id="descriptiond" name="description" rows="3" cols="33" placeholder="Décrivez L'idée de Votre Sujet"></textarea><br><br>
+                    <label for="date de début">Date de Début:</label><br><br>
+                    <input type="date" id="date de début" name="date de début" required><br><br>
+                    <label for="date de fin">Date de Fin:</label><br><br>
+                    <input type="date" id="date de fin" name="date de fin" required><br><br>
+                    <label for="encadrant">Responsable:</label><br><br>
+                    <select id="encadrant" name="encadrant" required>
+                        <option value="" desiabled selected>-------</option>>
+                        <option value="Prof I">Prof I</option>
+                        <option value="Prof II">Prof II</option>
+                        <option value="Prof III">Prof III</option>
+                        <option value="Prof IV">Prof IV</option>
+                        <option value="Prof V">Prof V</option>
+                        <option value="Prof VI">Prof VI</option>
+                        <option value="Prof VII">Prof VII</option>
+                    </select><br><br><br><br>
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </center>
+        <p><font face="arial" size="5">Bonne Chance Dans Votre PFE!</font></p>
+            </form>
+    </body>
+</html>

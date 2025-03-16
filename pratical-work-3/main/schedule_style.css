@@ -1,0 +1,107 @@
+body {
+    font-family: "Times New Roman", serif;
+    text-align: center;
+}
+
+.header-table {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.schedule-table {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.friday-table {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.deprt-info, .year-info {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    width: 333px;
+    height: 115px;
+}
+
+.separator {
+    width: 75%;
+    border: 0.em solid black;
+}
+
+.header-table {
+    width: 75%;
+    border-collapse: collapse;
+}
+
+.schedule-header td {
+    background-color: #5f79a0;
+    color: white;
+    font-family: "Optima", sans-serif;
+    text-align: center;
+    width: calc(100% / 7);
+    height: 50px;
+}
+
+.schedule-header td:first-child {
+    background-color: #5f79a0;
+    width: 50px;
+    padding: 0;
+}
+
+.schedule-table, .friday-table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.schedule-table td, .friday-table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    height: 50px;
+}
+
+.day-cell {
+    background-color: #e4eef8;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    height: 75px;
+    width: 75px;
+    position: relative;
+}
+
+.day-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    font-size: 12px;
+    line-height: 1em;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.course {
+    padding: 10px;
+    text-align: center;
+}
+
+.black-cell {
+    background-color: black;
+    width: calc(100% / 7);
+}
+
+.empty-cell {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}

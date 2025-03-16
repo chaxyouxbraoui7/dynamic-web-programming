@@ -1,0 +1,325 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('resume_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 200px;
+    box-shadow: 0 0 30px whitesmoke;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background-color: whitesmoke;
+    margin: 50px auto;
+    transition: all 0.3s ease;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px whitesmoke;
+    padding: 25px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-pic {
+    flex: 0 0 auto;
+    position: relative;
+    margin: 0 25px;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid gold;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px whitesmoke;
+    transition: all 0.4s ease;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px whitesmoke;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    margin: 15px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+    margin: 15px 0;
+}
+
+.contact p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.contact i {
+    margin-right: 10px;
+    color: gold;
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    padding-bottom: 2px;
+}
+
+.contact a:hover {
+    color: gold;
+    border-bottom: 1px solid gold;
+}
+
+section {
+    width: 90%;
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.5);
+    padding-bottom: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+section h2 i {
+    margin-right: 10px;
+    color: gold;
+}
+
+section h3 {
+    font-size: 1.4em;
+    color: black;
+    margin: 15px 0 10px;
+}
+
+.summary p {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+    color: black;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: black;
+    border-left: 3px solid gold;
+    padding-left: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills li {
+    margin: 10px 0;
+    font-size: 1em;
+    position: relative;
+    padding-left: 25px;
+}
+
+.skills li:before {
+    content: "▹";
+    color: gold;
+    position: absolute;
+    left: 0;
+}
+
+.education .degree {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.education p, .certifications p {
+    font-size: 1em;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.education p i, .certifications p i {
+    margin-right: 10px;
+    color: gold;
+}
+
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.certification {
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255, 215, 0, 0.05);
+    border-left: 3px solid gold;
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: gold;
+    color: black;
+    transform: translateY(-3px);
+}
+
+#dark-mode-checkbox {
+    display: none;
+}
+
+.dark-mode-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 40px;
+    border: 2px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.dark-mode-label::before {
+    content: "Dark Mode";
+    transition: all 0.3s ease;
+}
+
+#dark-mode-checkbox:checked ~ .dark-mode-label {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+#dark-mode-checkbox:checked ~ .dark-mode-label::before {
+    content: "Light Mode";
+    transition: all 0.3s ease;
+}
+
+#dark-mode-checkbox:checked ~ .main-container {
+    filter: invert(0.9) hue-rotate(180deg);
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#dark-mode-checkbox:checked ~ .main-container img {
+    filter: invert(1) hue-rotate(180deg);
+}
