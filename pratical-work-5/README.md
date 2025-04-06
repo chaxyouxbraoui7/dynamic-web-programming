@@ -12,4 +12,4 @@ Each exercise is built using HTML & JavaScript (I moght add CSS later).
 
 3. **Quiz Game**: In this quiz (3rd one), the user is asked a series of questions, and their answers are compared to the correct ones. At the end of the quiz, the score is displayed, showing the number of *correct*, *wrong*, and *skipped answers*. The user is also shown the corrected answers after completing the quiz.
 
-**I felt nostalgic for ***C*** when exploring this JavaScript for the first time XD
+# I felt nostalgic for ***C*** when exploring this JavaScript for the first time XD
