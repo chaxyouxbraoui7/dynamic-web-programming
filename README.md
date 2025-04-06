@@ -1,6 +1,6 @@
 ## Repository Overview
 
-This is a folder that contains practical activities & work of the dynamic web programming course.
+This is a repo that contains practical activities & work of the dynamic web programming course.
 
 **Featuring :**
 
