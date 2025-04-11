@@ -8,7 +8,7 @@
 
     <title>Dynamic Web Programming</title>
 
-    <link rel="icon" type="image/jpeg" href="imgs-(xd)/xd_.jpg">
+    <link rel="icon" type="image/jpeg" href="imgs-(xd)/xd.jpg">
 
     <style>
 
@@ -16,7 +16,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('imgs-(xd)/git.jpg') no-repeat center center fixed;
+            background: url('imgs-(xd)/bg.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #E0E0E0;
             transition: color 0.25s;
@@ -28,32 +28,27 @@
             padding: 1.5rem 2rem;
             text-align: center;
             border-bottom: 2px solid #0078D7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
-        }
-
-        nav {
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            margin: 1rem;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            color: #E0E0E0;
-            background-color: rgba(0, 120, 215, 0.8);
-            border-radius: 5px;
-            transition: background-color 0.25s, transform 0.25s;
-        }
-
-        nav a:hover {
-            background-color: rgba(0, 90, 158, 0.8);
-            transform: scale(1.1);
         }
 
         .container {
@@ -81,12 +76,6 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .folder img {
-            max-width: 60px;
-            max-height: 60px;
-            border-radius: 8px;
-        }
-
         .folder a {
             text-decoration: none;
             color: #0078D7;
@@ -99,23 +88,37 @@
             color: #005A9E;
         }
 
-        .dark-mode-toggle {
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(31, 31, 31, 0.8);
+            padding: 1.5rem;
+            border-top: 2px solid #0078D7;
             position: fixed;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 120, 215, 0.8);
-            color: #FFF;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.25s, transform 0.25s;
+            bottom: 0;
+            width: 100%;
         }
 
-        .dark-mode-toggle:hover {
-            background: rgba(0, 90, 158, 0.8);
-            transform: scale(1.1);
+        footer img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        footer img:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #E0E0E0;
+        }
+
     </style>
 
 </head>
@@ -123,79 +126,47 @@
 <body>
 
     <header>
+        <img src="imgs-(xd)/`xd.jpg" alt="Left Icon">
         <h1>Dynamic Web Programming - Practical Works</h1>
+        <img src="imgs-(xd)/xd`.jpg" alt="Right Icon">
     </header>
-
-    <button class="dark-mode-toggle" onclick="dark_mode()">Toggle Dark Mode</button>
 
     <div class="container">
 
-        <nav>
-            <a href="#pratical-work-1">Work 1</a>
-            <a href="#pratical-work-2">Work 2</a>
-            <a href="#pratical-work-3">Work 3</a>
-            <a href="#pratical-work-4">Work 4</a>
-            <a href="#pratical-work-5">Work 5</a>
-            <a href="#pratical-work-6">Work 6</a>
-        </nav>
-
         <section id="pratical-work-1" class="folder">
-            <img src="pratical-work-1/xd1.jpg" alt="Work 1">
-            <a href="pratical-work-1/schedule.html">Practical Work 1</a>
+            <a href="pratical-work-1/schedule.html">Practical Work 1 - HTML</a>
         </section>
 
         <section id="pratical-work-2" class="folder">
-            <img src="pratical-work-2/xd2.jpg" alt="Work 2">
-            <a href="pratical-work-2/form.html">Practical Work 2</a>
+            <a href="pratical-work-2/form.html">Practical Work 2 - HTML</a>
         </section>
 
         <section id="pratical-work-3" class="folder">
-            <img src="pratical-work-3/xd3.jpg" alt="Work 3">
-            <a href="pratical-work-3/main/schedule.html">Practical Work 3</a>
+            <a href="pratical-work-3/main/schedule.html">Practical Work 3 - HTML& CSS</a>
         </section>
 
         <section id="pratical-work-4" class="folder">
-            <img src="pratical-work-4/xd4.jpg" alt="Work 4">
-            <a href="pratical-work-4/resume.html">Practical Work 4</a>
+            <a href="pratical-work-4/resume.html">Practical Work 4 - HTML & CSS (might add JS)</a>
         </section>
 
-        <section id="pratical-work-5" class="folder">
-            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
-            <a href="pratical-work-5/ex-1/calc_ex_1.html">Practical Work 5</a>
+        <section id="pratical-work-5-ex-1" class="folder">
+            <a href="pratical-work-5/ex-1/calc_ex_1.html">Practical Work 5 - HTML & JS (might add CSS)</a>
         </section>
 
-        <section id="pratical-work-5" class="folder">
-            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
-            <a href="pratical-work-5/ex-2/guess_num_ex_2.html">Practical Work 5</a>
+        <section id="pratical-work-5-ex-2" class="folder">
+            <a href="pratical-work-5/ex-2/guess_num_ex_2.html">Practical Work 5 - HTML & JS (might add CSS)</a>
         </section>
 
-        <section id="pratical-work-5" class="folder">
-            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
-            <a href="pratical-work-5/ex-3/quiz_ex_3.html">Practical Work 5</a>
+        <section id="pratical-work-5-ex-3" class="folder">
+            <a href="pratical-work-5/ex-3/quiz_ex_3.html">Practical Work 5 - HTML & JS (might add CSS)</a>
         </section>
-
-        <!--<section id="pratical-work-6" class="folder">
-            <img src="pratical-work-6/xd6.jpg" alt="Work 6">
-            <a href="pratical-work-6/index.html">Practical Work 6</a>
-        </section>-->
 
     </div>
 
-    <script>
-
-        const dark_mode = () => {
-            document.body.classList.toggle('dark-mode');
-
-            if (document.body.classList.contains('dark-mode')) {
-                document.body.style.color = '#E0E0E0';
-            }
-            
-            else {
-                document.body.style.color = '#E0E0E0';
-            }
-        };
-        
-    </script>
+    <footer>
+        <img src="imgs-(xd)/xd_.jpg" alt="Footer Icon">
+        <p>&copy; 2025 Ayoub Chabraoui. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
