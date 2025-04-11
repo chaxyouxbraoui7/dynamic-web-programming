@@ -13,7 +13,7 @@
     <style>
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Times New Roman';
             margin: 0;
             padding: 0;
             background: url('imgs-(xd)/bg.jpg') no-repeat center center fixed;
@@ -52,17 +52,17 @@
         }
 
         .readme {
-            max-width: 800px;
+            max-width: 100%;
             margin: 2rem auto;
             padding: 2rem;
+            border-radius: 11px;
             background-color: rgba(31, 31, 31, 0.8);
-            border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             color: #E0E0E0;
         }
 
         .readme h2, .readme h3 {
-            color: #FFD700;
+            color: #0078D7;
         }
 
         .readme pre {
@@ -73,10 +73,18 @@
             overflow-x: auto;
         }
 
+        .readme pre:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #005A9E;
+            transform: scale(1.02);
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 5rem;
             background-color: rgba(31, 31, 31, 0.8);
             border-radius: 8px;
         }
@@ -88,7 +96,7 @@
             margin: 1rem 0;
             padding: 1rem;
             background: rgba(31, 31, 31, 0.9);
-            border-radius: 8px;
+            border-radius: 11px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.25s, box-shadow 0.25s;
         }
@@ -115,9 +123,9 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(31, 31, 31, 0.8);
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-top: 2px solid #0078D7;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -153,26 +161,27 @@
         <img src="imgs-(xd)/xd`.jpg" alt="Right Icon">
     </header>
 
-    <section class="readme">
-        <h2>Repository Overview</h2>
-        <p>This is a repo that contains practical activities & work of the dynamic web programming course.</p>
-
-        <h3><strong>Featuring:</strong></h3>
-        <ul>
-            <li><strong>HTML (HyperText Markup Language):</strong> The standard language for creating web pages. It structures content on the web using elements like headings, paragraphs, links, and images.</li>
-            <li><strong>CSS (Cascading Style Sheets):</strong> A language used to style and design HTML elements. It controls layout, colors, fonts, and responsiveness to make web pages visually appealing.</li>
-            <li><strong>JavaScript:</strong> A programming language that adds interactivity to websites. It allows for dynamic content, animations, form validation, and communication with servers.</li>
-            <li><strong>PHP (Hypertext Preprocessor):</strong> A server-side scripting language used for creating dynamic web pages. It interacts with databases, processes forms, and generates content on the server before sending it to the browser.</li>
-            <li><strong>SQL (Structured Query Language):</strong> A language for managing and manipulating relational databases. It is used to store, retrieve, update, and delete data in databases like MySQL, PostgreSQL, or SQL Server.</li>
-        </ul>
-
-        <h3>Clone the Repository:</h3>
-        <pre>
-git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git
-        </pre>
-    </section>
-
     <div class="container">
+
+        <section class="readme">
+            <h2>Repository Overview</h2>
+            <p>This is a repo that contains practical activities & work of the dynamic web programming course.</p>
+    
+            <h3><strong>Featuring:</strong></h3>
+            <ul>
+                <li><strong>HTML (HyperText Markup Language):</strong> The standard language for creating web pages. It structures content on the web using elements like headings, paragraphs, links, and images.</li>
+                <br>
+                <li><strong>CSS (Cascading Style Sheets):</strong> A language used to style and design HTML elements. It controls layout, colors, fonts, and responsiveness to make web pages visually appealing.</li>
+                <br>
+                <li><strong>JavaScript:</strong> A programming language that adds interactivity to websites. It allows for dynamic content, animations, form validation, and communication with servers.</li>
+                <br>
+                <li><strong>PHP (Hypertext Preprocessor):</strong> A server-side scripting language used for creating dynamic web pages. It interacts with databases, processes forms, and generates content on the server before sending it to the browser.</li>
+                <li><strong>SQL (Structured Query Language):</strong> A language for managing and manipulating relational databases. It is used to store, retrieve, update, and delete data in databases like MySQL, PostgreSQL, or SQL Server.</li>
+            </ul>
+    
+            <h3>Clone the Repository:</h3>
+            <pre>git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git</pre>
+        </section>
 
         <section id="pratical-work-1" class="folder">
             <a href="pratical-work-1/schedule.html">Practical Work 1 - HTML</a>
@@ -201,6 +210,10 @@ git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git
         <section id="pratical-work-5-ex-3" class="folder">
             <a href="pratical-work-5/ex-3/quiz_ex_3.html">Practical Work 5 - HTML & JS (might add CSS)</a>
         </section>
+        
+        <!--<section id="pratical-work-6" class="folder">
+        <a href="pratical-work-5/ex-3/quiz_ex_3.html">Practical Work 6 - HTML & JS (might add CSS)</a>
+        </section>-->
 
     </div>
 
