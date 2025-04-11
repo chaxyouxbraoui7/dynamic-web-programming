@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 - Tp6</title>
+
+    <style>
+
+        body {
+            font-family: 'Times New Romaan';
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            color: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background-color: #0058af;
+            color: white;
+        }
+
+        h1, h2, h3 {
+            margin: 11px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #ecf0f1;
+        }
+
+        #to_do {
+            background-color: #ffffff;
+            padding: 33px;
+            border-radius: 15px;
+            box-shadow: 0 7px 11px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+        }
+
+        #task_input {
+            width: 75%;
+            padding: 11px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        #task_input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 7px rgba(52, 152, 219, 0.35);
+        }
+
+        button {
+            padding: 11px 25px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.35s ease, transform 0.25s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2.5px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            background-color: #216a94;
+        }
+
+        #task_list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        #task_list li {
+            background-color: #ffffff;
+            padding: 11px 15px;
+            margin: 11px 0;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 7px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        #task_list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.15);
+        }
+        
+        .task-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .complet {
+            text-decoration: line-through;
+            color: rgb(100, 100, 100);
+            opacity: 0.5;
+        }
+
+        .complete-btn, .delete-btn {
+            padding: 7px 11px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            transition: background-color 0.35s ease, transform 0.25s ease;
+        }
+
+        .complete-btn {
+            background-color: #2ecc71;
+        }
+
+        .complete-btn:hover {
+            background-color: #27ae60;
+            transform: scale(1.15);
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body>
+    <header id="header_id">
+        <h1>Tp 6</h1>
+        <h2>Exercice 02</h2>
+        <h3>Implémentation d'une "to-do list" interactive avec ajout, marquage et suppression de tâches via le DOM et les événements JavaScript.</h3>
+    </header>
+    <form id="to_do">
+        <input type="text" id="task_input" placeholder="Nouvelle tâche">
+        <button type="submit">Ajouter une tâche</button>
+        <ul id="task_list"></ul>
+    </form>
+    <script src="to_do_list_ex_2.js"></script>
+</body>
+</html>
