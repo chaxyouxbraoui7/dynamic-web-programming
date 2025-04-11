@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Ayoub Chabraoui" content="chaxyouxbraoui7">
+
+    <title>Dynamic Web Programming</title>
+
+    <link rel="icon" type="image/jpeg" href="imgs-(xd)/xd_.jpg">
+
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('imgs-(xd)/git.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #E0E0E0;
+            transition: color 0.25s;
+        }
+
+        header {
+            background-color: rgba(31, 31, 31, 0.8);
+            color: #E0E0E0;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid #0078D7;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #E0E0E0;
+            background-color: rgba(0, 120, 215, 0.8);
+            border-radius: 5px;
+            transition: background-color 0.25s, transform 0.25s;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 90, 158, 0.8);
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(31, 31, 31, 0.8);
+            border-radius: 8px;
+        }
+
+        .folder {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(31, 31, 31, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .folder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .folder img {
+            max-width: 60px;
+            max-height: 60px;
+            border-radius: 8px;
+        }
+
+        .folder a {
+            text-decoration: none;
+            color: #0078D7;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.25s;
+        }
+
+        .folder a:hover {
+            color: #005A9E;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 120, 215, 0.8);
+            color: #FFF;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.25s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: rgba(0, 90, 158, 0.8);
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Dynamic Web Programming - Practical Works</h1>
+    </header>
+
+    <button class="dark-mode-toggle" onclick="dark_mode()">Toggle Dark Mode</button>
+
+    <div class="container">
+
+        <nav>
+            <a href="#pratical-work-1">Work 1</a>
+            <a href="#pratical-work-2">Work 2</a>
+            <a href="#pratical-work-3">Work 3</a>
+            <a href="#pratical-work-4">Work 4</a>
+            <a href="#pratical-work-5">Work 5</a>
+            <a href="#pratical-work-6">Work 6</a>
+        </nav>
+
+        <section id="pratical-work-1" class="folder">
+            <img src="pratical-work-1/xd1.jpg" alt="Work 1">
+            <a href="pratical-work-1/schedule.html">Practical Work 1</a>
+        </section>
+
+        <section id="pratical-work-2" class="folder">
+            <img src="pratical-work-2/xd2.jpg" alt="Work 2">
+            <a href="pratical-work-2/form.html">Practical Work 2</a>
+        </section>
+
+        <section id="pratical-work-3" class="folder">
+            <img src="pratical-work-3/xd3.jpg" alt="Work 3">
+            <a href="pratical-work-3/main/schedule.html">Practical Work 3</a>
+        </section>
+
+        <section id="pratical-work-4" class="folder">
+            <img src="pratical-work-4/xd4.jpg" alt="Work 4">
+            <a href="pratical-work-4/resume.html">Practical Work 4</a>
+        </section>
+
+        <section id="pratical-work-5" class="folder">
+            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
+            <a href="pratical-work-5/ex-1/calc_ex_1.html">Practical Work 5</a>
+        </section>
+
+        <section id="pratical-work-5" class="folder">
+            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
+            <a href="pratical-work-5/ex-2/guess_num_ex_2.html">Practical Work 5</a>
+        </section>
+
+        <section id="pratical-work-5" class="folder">
+            <img src="pratical-work-5/xd5.jpg" alt="Work 5">
+            <a href="pratical-work-5/ex-3/quiz_ex_3.html">Practical Work 5</a>
+        </section>
+
+        <!--<section id="pratical-work-6" class="folder">
+            <img src="pratical-work-6/xd6.jpg" alt="Work 6">
+            <a href="pratical-work-6/index.html">Practical Work 6</a>
+        </section>-->
+
+    </div>
+
+    <script>
+
+        const dark_mode = () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.style.color = '#E0E0E0';
+            }
+            
+            else {
+                document.body.style.color = '#E0E0E0';
+            }
+        };
+        
+    </script>
+
+</body>
+</html>
