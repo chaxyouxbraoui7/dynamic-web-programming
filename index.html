@@ -11,88 +11,74 @@
     <link rel="icon" type="image/jpeg" href="imgs-(xd)/xd.png">
 
     <style>
-
+        :root {
+            --primary-color: #0078D7;
+            --dark-bg: rgba(31, 31, 31, 0.8);
+            --text-color: #E0E0E0;
+            --hover-color: #005A9E;
+        }
+    
+        * {
+            box-sizing: border-box;
+        }
+    
         body {
-            font-family: 'Times New Roman';
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             background: url('imgs-(xd)/bg.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: #E0E0E0;
+            color: var(--text-color);
             transition: color 0.25s;
-        }
-
-        header {
-            background-color: rgba(31, 31, 31, 0.8);
-            color: #E0E0E0;
-            padding: 1.5rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid #0078D7;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
+        }
+    
+        header {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.5rem;
         }
-
+    
         header img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+    
         header img:hover {
             transform: scale(1.2);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
-
+    
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
         }
-
-        .readme {
-            max-width: 100%;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 11px;
-            background-color: rgba(31, 31, 31, 0.8);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            color: #E0E0E0;
-        }
-
-        .readme h2, .readme h3 {
-            color: #0078D7;
-        }
-
-        .readme pre {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #00FF00;
-            padding: 1rem;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-
-        .readme pre:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #005A9E;
-            transform: scale(1.02);
-            transition: all 0.25s ease-in-out;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
+    
         .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 5rem;
-            background-color: rgba(31, 31, 31, 0.8);
+            width: 100%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: var(--dark-bg);
             border-radius: 8px;
+            flex: 1;
         }
-
+    
         .folder {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
             margin: 1rem 0;
             padding: 1rem;
             background: rgba(31, 31, 31, 0.9);
@@ -100,55 +86,116 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.25s, box-shadow 0.25s;
         }
-
+    
+        @media (min-width: 768px) {
+            .folder {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            header {
+                flex-direction: row;
+                padding: 1.5rem 2rem;
+            }
+            
+            header img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    
         .folder:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
         }
-
+    
         .folder a {
             text-decoration: none;
-            color: #0078D7;
+            color: var(--primary-color);
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             transition: color 0.25s;
+            word-break: break-word;
         }
-
+    
         .folder a:hover {
-            color: #005A9E;
+            color: var(--hover-color);
         }
-
+    
         footer {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: rgba(31, 31, 31, 0.8);
-            padding: 1.25rem;
-            border-top: 2px solid #0078D7;
-            position: relative;
-            bottom: 0;
+            background-color: var(--dark-bg);
+            padding: 1rem;
+            border-top: 2px solid var(--primary-color);
             width: 100%;
+            text-align: center;
         }
-
+    
         footer img {
-            width: 50px;
-            height: 50px;
-            margin-right: 1rem;
+            width: 40px;
+            height: 40px;
+            margin: 0 0 0.5rem 0;
             border-radius: 50%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+    
+        @media (min-width: 600px) {
+            footer {
+                flex-direction: row;
+                padding: 1.25rem;
+            }
+            
+            footer img {
+                width: 50px;
+                height: 50px;
+                margin: 0 1rem 0 0;
+            }
+        }
+    
         footer img:hover {
             transform: scale(1.2);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
-
+    
         footer p {
             margin: 0;
-            font-size: 1rem;
-            color: #E0E0E0;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            color: var(--text-color);
         }
 
+        @media (min-width: 1600px) {
+            .container {
+                max-width: 1400px;
+                padding: 3rem;
+            }
+            
+            header {
+                padding: 2rem;
+            }
+            
+            header h1 {
+                font-size: 3rem;
+            }
+            
+            .folder a {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+            
+            .folder {
+                padding: 0.75rem;
+            }
+        }
     </style>
 
 </head>
@@ -162,29 +209,6 @@
     </header>
 
     <div class="container">
-
-        <section class="readme">
-            <h2>Repository Overview</h2>
-            <p>This is a repo that contains practical activities & work of the dynamic web programming course.</p>
-    
-            <h3><strong>Featuring:</strong></h3>
-            <ul>
-                <li><strong>HTML (HyperText Markup Language):</strong> The standard language for creating web pages. It structures content on the web using elements like headings, paragraphs, links, and images.</li>
-                <br>
-                <li><strong>CSS (Cascading Style Sheets):</strong> A language used to style and design HTML elements. It controls layout, colors, fonts, and responsiveness to make web pages visually appealing.</li>
-                <br>
-                <li><strong>JavaScript:</strong> A programming language that adds interactivity to websites. It allows for dynamic content, animations, form validation, and communication with servers.</li>
-                <br>
-                <li><strong>PHP (Hypertext Preprocessor):</strong> A server-side scripting language used for creating dynamic web pages. It interacts with databases, processes forms, and generates content on the server before sending it to the browser.</li>
-                <br>
-                <li><strong>SQL (Structured Query Language):</strong> A language for managing and manipulating relational databases. It is used to store, retrieve, update, and delete data in databases like MySQL, PostgreSQL, or SQL Server.</li>
-            </ul>
-    
-            <h3>Clone the Repository:</h3>
-            <pre>git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git</pre>
-
-            
-        </section>
         
         <h1>The Practical Works:</h1>
 
