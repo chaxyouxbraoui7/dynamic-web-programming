@@ -5,109 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface Homme Machine</title>
     <style>
+        :root {
+          --bg-color: #f4f4f4;
+          --container-bg: white;
+          --button-color: green;
+          --button-hover: red;
+          --dark-label-bg: white;
+          --dark-label-text: black;
+          --dark-label-border: black;
+          --dark-mode-active: gold;
+        }
+        
         body {
-            font-family: Times, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-            padding: 0;
-            overflow: hidden;
+          font-family: Times, sans-serif;
+          text-align: center;
+          background-color: var(--bg-color);
+          margin: 0;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+          padding: 0;
         }
-
+        
         .main-container {
-            width: 100%;
-            height: 100vh;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: white;
+          width: 100%;
+          min-height: 100vh;
+          padding: 2rem;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          transition: all 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: var(--container-bg);
         }
-
+        
         .chapitres {
-            margin-bottom: 50px;
+          margin-bottom: 3rem;
         }
-
+        
         .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: green;
-            color: white;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            text-decoration: dotted;
-            border-radius: 15px;
+          display: inline-block;
+          padding: 0.8rem 1.5rem;
+          background-color: var(--button-color);
+          color: white;
+          text-decoration: none;
+          border-radius: 15px;
+          transition: all 0.3s ease;
+          font-size: 1rem;
         }
-
+        
         .back-button:hover {
-            background-color: red;
+          background-color: var(--button-hover);
+          transform: scale(1.05);
         }
-
+        
         #dark-mode-checkbox {
-            display: none;
+          display: none;
         }
-
+        
         .dark-mode-label {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 100px;
-            height: 30px;
-            background: #ddd;
-            background-color: white;
-            border: 2px solid #ddd;
-            border-color: black;
-            padding: 5px;            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            font-weight: bold;
-            color: black;
-            cursor: pointer;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            z-index: 1;
-            box-sizing: border-box;
+          position: fixed;
+          bottom: 1.5rem;
+          right: 1.5rem;
+          width: 6.5rem;
+          height: 2.5rem;
+          background: var(--dark-label-bg);
+          border: 2px solid var(--dark-label-border);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: var(--dark-label-text);
+          cursor: pointer;
+          border-radius: 20px;
+          transition: all 0.3s ease;
+          z-index: 100;
         }
-
+        
         .dark-mode-label::before {
-            content: "Dark Mode";
-            transition: all 0.3s ease;
+          content: "Dark Mode";
         }
-
+        
         #dark-mode-checkbox:checked ~ .main-container {
-            filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
         }
-
+        
         #dark-mode-checkbox:checked ~ .dark-mode-label {
-            background: black;
-            color: white;
-            border-color: gold;
+          background: black;
+          color: var(--dark-mode-active);
+          border-color: var(--dark-mode-active);
         }
-
-        #dark-mode-checkbox:checked ~ .back-button {
-            background-color: green;
-        }
-
-        #dark-mode-checkbox:checked ~ .back-button {
-            background-color: red;
-        }
-
+        
         #dark-mode-checkbox:checked ~ .dark-mode-label::before {
-            content: "Light Mode";
-            transition: all 0.3s ease;
+          content: "Light Mode";
         }
-
+        
+        @media (max-width: 768px) {
+          .main-container {
+            padding: 1.5rem;
+          }
+          
+          .chapitres {
+            margin-bottom: 2rem;
+          }
+          
+          .dark-mode-label {
+            width: 5.5rem;
+            height: 2.2rem;
+            font-size: 0.8rem;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .main-container {
+            padding: 1rem;
+          }
+          
+          .back-button {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+          }
+          
+          .dark-mode-label {
+            width: 5rem;
+            height: 2rem;
+            font-size: 0.7rem;
+            bottom: 1rem;
+            right: 1rem;
+          }
+        }
     </style>
 </head>
 <body>

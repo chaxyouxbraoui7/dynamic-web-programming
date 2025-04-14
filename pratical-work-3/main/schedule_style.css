@@ -1,21 +1,27 @@
+:root {
+    --primary-bg: #5f79a0;
+    --day-cell-bg: #e4eef8;
+    --text-light: white;
+}
+
 body {
     font-family: "Times New Roman", serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.header-table {
-    width: 75%;
+.header-table, .schedule-table, .friday-table {
+    width: 95%;
     margin: 0 auto;
+    border-collapse: collapse;
 }
 
-.schedule-table {
-    width: 75%;
-    margin: 0 auto;
-}
-
-.friday-table {
-    width: 75%;
-    margin: 0 auto;
+.logo {
+    width: 100%;
+    max-width: 333px;
+    height: auto;
+    aspect-ratio: 333/115;
 }
 
 .deprt-info, .year-info {
@@ -24,39 +30,27 @@ body {
     text-align: center;
 }
 
-.logo {
-    width: 333px;
-    height: 115px;
-}
-
 .separator {
-    width: 75%;
-    border: 0.em solid black;
-}
-
-.header-table {
-    width: 75%;
-    border-collapse: collapse;
+    width: 95%;
+    border: 0.1em solid black;
+    margin: 1em auto;
 }
 
 .schedule-header td {
-    background-color: #5f79a0;
-    color: white;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
     font-family: "Optima", sans-serif;
     text-align: center;
-    width: calc(100% / 7);
+    padding: 8px;
     height: 50px;
 }
 
 .schedule-header td:first-child {
-    background-color: #5f79a0;
+    background-color: var(--primary-bg);
     width: 50px;
-    padding: 0;
 }
 
 .schedule-table, .friday-table {
-    width: 75%;
-    border-collapse: collapse;
     margin-top: 20px;
     table-layout: fixed;
 }
@@ -69,39 +63,50 @@ body {
 }
 
 .day-cell {
-    background-color: #e4eef8;
+    background-color: var(--day-cell-bg);
     font-weight: bold;
-    text-align: center;
-    padding: 0;
-    height: 75px;
-    width: 75px;
     position: relative;
+    height: 75px;
 }
 
 .day-name {
-    transform: rotate(-90deg);
     position: absolute;
-    text-align: center;
     left: 50%;
     top: 50%;
-    font-size: 12px;
-    line-height: 1em;
-    transform-origin: center;
+    font-size: clamp(10px, 2vw, 12px);
     transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
 }
 
 .course {
     padding: 10px;
     text-align: center;
+    font-size: clamp(12px, 2vw, 14px);
 }
 
 .black-cell {
     background-color: black;
-    width: calc(100% / 7);
 }
 
 .empty-cell {
     border: 1px solid black;
     width: 50px;
     height: 50px;
+}
+
+@media (min-width: 768px) {
+    .header-table, .schedule-table, .friday-table, .separator {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-header td, .schedule-table td, .friday-table td {
+        padding: 4px;
+        height: 40px;
+    }
+    
+    .day-cell {
+        height: 60px;
+    }
 }

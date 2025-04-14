@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface Homme Machine</title>
     <style>
+        :root {
+            --light-bg: #f4f4f4;
+            --dark-bg: #222;
+            --button-color: green;
+            --button-hover: red;
+            --text-light: white;
+            --text-dark: black;
+        }
+        
         body {
             font-family: Times, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: var(--light-bg);
             margin: 0;
             min-height: 100vh;
             display: flex;
@@ -16,12 +25,11 @@
             align-items: center;
             transition: all 0.3s ease;
             padding: 0;
-            overflow: hidden;
         }
-
+        
         .main-container {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -31,83 +39,99 @@
             align-items: center;
             background: white;
         }
-
+        
         .dpw {
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
-
+        
         .back-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: green;
-            color: white;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            text-decoration: dotted;
+            background-color: var(--button-color);
+            color: var(--text-light);
+            text-decoration: none;
             border-radius: 15px;
+            transition: all 0.3s ease;
+            margin: 10px;
         }
-
+        
         .back-button:hover {
-            background-color: red;
+            background-color: var(--button-hover);
         }
-
+        
         #dark-mode-checkbox {
             display: none;
         }
-
+        
         .dark-mode-label {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 20px;
+            right: 20px;
             width: 100px;
-            height: 30px;
-            background: #ddd;
-            background-color: white;
-            border: 2px solid #ddd;
-            border-color: black;
-            padding: 5px;            
+            height: 40px;
+            background: white;
+            border: 2px solid black;
+            padding: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
             color: black;
             cursor: pointer;
             border-radius: 20px;
             transition: all 0.3s ease;
-            z-index: 1;
-            box-sizing: border-box;
+            z-index: 100;
         }
-
+        
         .dark-mode-label::before {
             content: "Dark Mode";
-            transition: all 0.3s ease;
         }
-
+        
         #dark-mode-checkbox:checked ~ .main-container {
             filter: invert(1) hue-rotate(180deg);
         }
-
+        
         #dark-mode-checkbox:checked ~ .dark-mode-label {
             background: black;
             color: white;
             border-color: gold;
         }
-
-        #dark-mode-checkbox:checked ~ .back-button {
-            background-color: green;
-        }
-
-        #dark-mode-checkbox:checked ~ .back-button {
-            background-color: red;
-        }
-
+        
         #dark-mode-checkbox:checked ~ .dark-mode-label::before {
             content: "Light Mode";
-            transition: all 0.3s ease;
         }
-
+        
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 10px;
+            }
+            
+            .dpw {
+                margin-bottom: 15px;
+            }
+            
+            .dark-mode-label {
+                width: 90px;
+                height: 35px;
+                font-size: 13px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .back-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            
+            .dark-mode-label {
+                width: 80px;
+                height: 30px;
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
