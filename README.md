@@ -2,7 +2,7 @@
 
 This is a repo that contains practical activities & work of the dynamic web programming course.
 
-### **Featuring:**
+### Featuring:
 
 - **HTML (HyperText Markup Language):** The standard language for creating web pages. It structures content on the web using elements like headings, paragraphs, links, and images.
 
@@ -20,4 +20,4 @@ This is a repo that contains practical activities & work of the dynamic web prog
 git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git
 ```
 
-## Explore all practical works: [**Dynamic Web Programming**](index.html)
+### Explore all practical works: [**Dynamic Web Programming**](https://chaxyouxbraoui7.github.io/dynamic-web-programming/)
