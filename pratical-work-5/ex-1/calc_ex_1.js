@@ -38,8 +38,8 @@ alert(
 // Ou l'affichage des résultats dans la console
 
 // console.log("La somme est : " + sum);
-// console.log("La difference est : " + difference);
-// console.log("Le produit est : " + product);
-// console.log("Le quotient est : " + quotient);
+// console.log("\nLa difference est : " + difference);
+// console.log("\nLe produit est : " + product);
+// console.log("\nLe quotient est : " + quotient);
 
 }

@@ -20,4 +20,9 @@ This is a repo that contains practical activities & work of the dynamic web prog
 git clone https://github.com/chaxyouxbraoui7/dynamic-web-programming.git
 ```
 
-### Explore all practical works: [**Dynamic Web Programming**](https://chaxyouxbraoui7.github.io/dynamic-web-programming/)
+### Explore all practical works (But static files only): [**Dynamic Web Programming**](https://chaxyouxbraoui7.github.io/dynamic-web-programming/)
+
+> [!NOTE]
+>
+> **I just noticed I made a typo in all the directory names lol**
+> **I don't think I'll change it though, I see it as a unique, unexpected style XD**

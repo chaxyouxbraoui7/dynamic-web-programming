@@ -12,4 +12,4 @@ A remake of the 1st pratical work made with **HTML** and styled this time with *
 
 3. **Directed/Practical Work Hyperlink :** The same concept as "Number 2"
 
-**Same thing with this pratical work, it has no back-end**
+**Same thing with this pratical work, it has no back-end, I might add some `@media` feature later.**

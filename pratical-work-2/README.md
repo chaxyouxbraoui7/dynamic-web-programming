@@ -26,6 +26,6 @@ Just a form that is also made and styled with **only HTML** (**No CSS!**).
 
 - **Annuler :** A button to reset all contents.
 
-## Notes
-
-**This pratical work deos not have a back-end!**
+> [!NOTE]
+>
+>**This pratical work deos not have a back-end!**

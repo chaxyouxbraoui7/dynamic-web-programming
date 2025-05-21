@@ -1,9 +1,9 @@
 :root {
     --bg-color: whitesmoke;
     --text-color: black;
-    --primary-color: gold;
+    --primary-color: lightgreen;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --light-shadow-color: rgb(255, 217, 0);
+    --light-shadow-color: rgba(150, 255, 52, 0.75);
     --secondary-bg-color: rgba(255, 255, 255, 0.9);
     --text-shadow-color: rgba(0, 0, 0, 0.2);
   }
@@ -64,13 +64,13 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--primary-color);
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px var(--light-shadow-color);
+      box-shadow: 0 0 20px rgba(114, 215, 0, 0.6), 0 0 40px var(--light-shadow-color);
       transition: all 0.4s ease;
   }
   
   .profile-pic img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px var(--light-shadow-color);
+      box-shadow: 0 0 25px rgba(114, 215, 0, 0.8), 0 0 50px var(--light-shadow-color);
   }
   
   .profile-info {
@@ -147,7 +147,7 @@
   section h2 {
       font-size: 2em;
       margin-bottom: 20px;
-      border-bottom: 2px solid rgba(255, 215, 0, 0.5);
+      border-bottom: 2px solid rgba(114, 215, 0, 0.5);
       padding-bottom: 10px;
       color: var(--text-color);
       display: flex;
@@ -326,30 +326,30 @@
   }
   
   .dark-mode-label {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 120px;
-      height: 40px;
-      border: 2px solid var(--primary-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
-      border-radius: 20px;
-      z-index: 100;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(5px);
-      transition: all 0.3s ease;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 111px;
+        height: 25px;
+        border: 2px solid var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+        z-index: 100;
+        box-shadow: 0 0 10px rgba(114, 215, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        transition: all 0.25s ease;
   }
   
   .dark-mode-label::before {
       content: "Dark Mode";
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
   }
   
   #dark-mode-checkbox:checked ~ .dark-mode-label {
@@ -359,7 +359,7 @@
   
   #dark-mode-checkbox:checked ~ .dark-mode-label::before {
       content: "Light Mode";
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
   }
   
   #dark-mode-checkbox:checked ~ .main-container {
@@ -370,92 +370,4 @@
     --light-shadow-color: black;
     --secondary-bg-color: rgba(51, 51, 51, 0.9);
     --text-shadow-color: rgba(255, 255, 255, 0.2);
-  }
-
-  @media (min-width: 1600px) {
-    .main-container {
-      padding: 150px;
-    }
-  
-    .profile-pic img {
-      width: 300px;
-      height: 300px;
-    }
-  
-    .name {
-      font-size: 2.5em;
-    }
-  
-    .title {
-      font-size: 2em;
-    }
-  }
-  
-  /* Standard desktops and laptops */
-  @media (max-width: 1200px) {
-    .main-container {
-      padding: 100px;
-    }
-  }
-  
-  /* Tablets */
-  @media (max-width: 768px) {
-    .main-container {
-      padding: 50px;
-    }
-  
-    .profile-pic img {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .name {
-      font-size: 1.8em;
-    }
-  
-    .title {
-      font-size: 1.3em;
-    }
-  
-    section {
-      padding: 20px;
-    }
-  
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .cert-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Phones */
-  @media (max-width: 480px) {
-    .main-container {
-      padding: 30px 15px;
-    }
-  
-    .profile-info {
-      text-align: center;
-      padding: 10px;
-    }
-  
-    .name, .title {
-      display: block;
-      text-align: center;
-    }
-  
-    .contact p {
-      font-size: 1em;
-      justify-content: center;
-    }
-  
-    .dark-mode-label {
-      top: 10px;
-      right: 10px;
-      width: 100px;
-      height: 35px;
-      font-size: 14px;
-    }
   }
