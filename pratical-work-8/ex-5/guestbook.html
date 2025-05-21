@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook | Add Message</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background: rgb(33, 33, 33);
+            padding: 45px;
+            border-radius: 11px;
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            margin-top: 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 11px;
+            border: 1px dashed whitesmoke;
+            border-radius: 1px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        input:focus, textarea:focus {
+            border-color: blue;
+            outline: none;
+        }
+        button {
+            background-color: cyan;
+            color: white;
+            padding: 12px 25px;
+            border: 2.5px dashed whitesmoke;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 50%;
+            font-size: 15px;
+        }
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <form action="save_mssg.php" method="POST">
+
+        <h2>Leave a Message</h2>
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <div class="button-container">
+            <button type="submit">Post Message</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

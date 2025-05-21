@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: #161616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 1100px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        form {
+            background: rgb(33, 33, 33);
+            padding: 45px;
+            border-radius: 11px;
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            margin-top: 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 11px;
+            border: 1px dashed whitesmoke;
+            border-radius: 1px;
+            background-color: #000000;
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #4a6cf7;
+            background-color: black;
+        }
+        input:focus, textarea:focus {
+            border-color: #4a6cf7;
+            outline: none;
+        }
+        button {
+            background-color: #4a9bf7;
+            color: white;
+            padding: 12px 25px;
+            border: 2.5px dashed whitesmoke;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 50%;
+            font-size: 11px;
+        }
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="contact.php" method="GET">
+
+        <h2>Contact us</h2>
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <div class="button-container">
+            <button type="submit">Send Message</button>
+        </div>
+
+    </form>
+</body>
+</html>

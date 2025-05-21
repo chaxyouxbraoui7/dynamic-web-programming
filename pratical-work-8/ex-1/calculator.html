@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+
+        body {
+            background-color: #161616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background: rgb(41, 41, 41);
+            padding: 45px;
+            border-radius: 11px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            color: white;
+            width: 75%;
+            padding: 15px;
+            border: 3px solid darkblue;
+            border-radius: 7px;
+            background-color: #000000;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4a6cf7;
+            outline: none;
+        }
+
+        select {
+            width: 25%;
+            padding: 15px;
+            border: 2.5px solid darkblue;
+            border-radius: 7px;
+            font-size: 15px;            
+            background-color: #000000;
+            color: white;
+            appearance: none;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4a6cf7;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 15px;
+            border: solid black;
+            border-radius: 7em;
+            cursor: pointer;
+            width: 100%;
+        }       
+
+    </style>
+
+</head>
+<body>
+
+    <form action="calculator.php" method="POST">
+        <input type="number" name="1st_num" placeholder="First number" required>
+
+        <br><br>
+        
+        <div>
+            <select name="opt">
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mul">*</option>
+                <option value="div">÷</option>
+                <option value="mod">%</option>
+            </select>
+        </div>
+
+        <br>
+
+        <input type="number" name="2nd_num" placeholder="Second number" required>
+        <button type="submit">Calculate</button>
+        
+    </form>
+
+</body>
+</html>
