@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrior Game</title>
+    
+    <style>
+
+        body {
+            font-family:'Segoe UI';
+            padding: 7px;
+            overflow: hidden;
+            background: #0a101a;
+            color: #dcedff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 111vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 62%;
+            height: 62%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #004ea7;
+            text-shadow: 3px 4px 7px #99c9ff;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #58a6ff;
+            text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+            margin-bottom: 25px;
+        }
+
+        form {
+            background: #16191d;
+            padding: 25px;
+            border-radius: 11px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(19, 22, 26, 0.2);
+            text-align: center;
+            width: 62%;
+            height: 62%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+    
+        input {
+            background: #256eff34;
+            color: #c9d1d9;
+            outline: none;
+            padding: 10px;
+            margin: 10px 0;
+            width: 45%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+    
+        input:focus {
+            border: 1.25px solid #58a6ff;
+            box-shadow: 0 0 11px #58a6ff;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 15%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #58a6ff;
+            color: #0d1117;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.5s ease, transform 0.25s ease;
+        }
+
+        button:hover {
+            background: #1f6feb;
+            transform: scale(1.05);
+        }
+
+        p {
+            margin-top: 50px;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 25px;
+            text-decoration: overline;
+            transition: color 0.5s ease;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .neon {
+            border: 2px solid #58a6ff;
+            animation: glow 0.25s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 11px #58a6ff, 0 0 22px #58a6ff;
+            }
+            to {
+                box-shadow: 0 0 22px #1f6feb, 0 0 33px #1f6feb;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Welcome To The Warrior Game!</h1>
+
+    <div class="container">
+
+        <form action="add.php" method="POST" class="neon">
+    
+            <h2>Create A Warrior</h2>
+            <input type="text" name="name" placeholder="Enter a name" required>
+            <button type="submit">Create</button>
+    
+        </form>
+    
+            <p><a href="arena.php">Start the Game</a></p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Management</title>
+
+    <style>
+        
+        body {
+            font-family: sans-serif;
+            background-color: #161616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 1100px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        form {
+            background: rgb(33, 33, 33);
+            padding: 45px;
+            border-radius: 11px;
+            width: 100%;
+            max-width: 450px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 0;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 11px;
+            border: 1px dashed blue;
+            border-radius: 1px;
+            background-color: #000000;
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        input:focus {
+            border-color: cyan;
+            background-color: black;
+            outline: none;
+        }
+        button {
+            background-color: green;
+            color: whitesmoke;
+            font-weight: bolder;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 3em;
+            cursor: pointer;
+            width: 25%;
+            font-size: 15px;
+            margin-top: 22px;
+        }
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a {
+            color: darkblue;
+            font-weight: bolder;
+            padding: 15px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 15px;
+            display: inline-block;
+        }
+        .a-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        
+        <h1>Add New Exercise</h1>
+
+        <form action="create.php" method="POST">
+
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="autor" placeholder="Author" required>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    
+        
+        <div class="a-container">
+            <a href="list.php">View All Exercises</a>
+        </div>
+    
+    </div>
+</body>
+</html>
