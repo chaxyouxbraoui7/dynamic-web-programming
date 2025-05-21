@@ -2,9 +2,9 @@
 
 This is the 10th practical work built with HTML, CSS and PHP. It covers a session management, database CRUD operations, and a mini combat game.
 
-## Description
+## It Features
 
-1. ### A Session-Based Login System
+1. A Session-Based Login System
 
 #### It Features:
 
@@ -12,7 +12,7 @@ This is the 10th practical work built with HTML, CSS and PHP. It covers a sessio
 
 - **Logout functionality with session_destroy().**
 
-2. ### A CRUD Application using MySQL
+2. A CRUD Application using MySQL
 
 #### It Features:
 
@@ -26,7 +26,7 @@ This is the 10th practical work built with HTML, CSS and PHP. It covers a sessio
 
 - **Success/failure messages after each operation.**
 
-3. ### A Mini Combat Game (OOP + MySQL)
+3. A Mini Combat Game (OOP + MySQL)
 
 #### Game Mechanics:
 
