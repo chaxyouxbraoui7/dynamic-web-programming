@@ -1,6 +1,8 @@
-# This is the 7th practical work built with HTML, CSS, JavaScript, and PHP. Two simple HTML & PHP forms that collects user details and displays them dynamically.
+## Description
 
-# Features
+This is the 7th practical work built with HTML, CSS, JavaScript, and PHP. Two simple HTML & PHP forms that collects user details and displays them dynamically.
+
+## It Features
 
 - **Fields like name, email, password, birth date and preferences.**
 
