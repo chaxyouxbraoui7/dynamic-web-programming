@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulaire | HTML & PHP</title>
+
+</head>
+    <body>
+            <h1 style="text-align: center;">Remplir Le Formulaire Suivant :</h1>
+        <hr>
+
+            <form action="form_.php" method="GET">
+
+                    <select name="title">
+                        <option selected>Mx</option>
+                        <option>Monsieur</option>
+                        <option>Mme</option>
+                    </select>
+
+                    <label for="nom">Nom : </label>
+                    <input type="text" name="nom" placeholder="Votre Nom" required>
+                    
+                    <br><br>
+
+                    <label for="prenom">Prénom : </label>
+                    <input type="text" name="prenom" placeholder="Votre Prénom" required>
+                    
+                    <br><br>
+
+                    <label for="sexe">Sexe : </label>
+                    <input type="radio" name="sexe" value="M" checked/> Masculin
+                    <input type="radio" name="sexe" value="F"/> Féminin
+                    
+                    <br><br>
+
+                    <label for="date_nss">Date de naissance : </label>
+                    <input type="date" name="date_nss" required>
+                    
+                    <br><br>
+
+                    <label for="email">Address Email : </label>
+                    <input type="text" name="email" placeholder="Votre Email" required>
+                    
+                    <br><br>
+
+                    <label for="psswrd">Mot de passe : </label>
+                    <input type="text" name="psswrd" placeholder="Votre mot de passe" required>
+
+                    <br><br>
+                    
+                    <label for="cats">Type de chats que vous aimez : </label>
+                    <select name="cats" required>
+                        
+                        <option value="" desiabled selected>-------</option>
+                        <option value="black">Noir</option>
+                        <option value="orange">Orange</option>
+                        <option value="white">Blanc</option>
+                        <option value="other">Autres</option>
+                        
+                    </select>
+
+                    <br><br>
+
+                    <input type="checkbox" name="conditions" required/> J'accepte les conditions!
+                    
+                    <br><br><br>
+
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+            </form>
+
+        <hr>
+
+    </body>
+</html>
