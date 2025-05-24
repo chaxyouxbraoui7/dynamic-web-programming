@@ -26,8 +26,6 @@ else {
 
 // Mais comme je suis nostalgique du langage C, je vais écrire ce qui précède tel quel.
 
-// Ou l'affichage des résultats dans la console
-
 alert(
     "La somme est : " + somme +
     "\n\nLa difference est : " + difference +
@@ -35,7 +33,7 @@ alert(
     "\n\nLe quotient est : " + quotient
   )
 
-// Ou l'affichage des résultats dans la console
+// Ou l'affichage des résultats dans la console (what the exercise says, but I as always I didn't read the ex carfully lol)
 
 // console.log("La somme est : " + sum);
 // console.log("\nLa difference est : " + difference);
