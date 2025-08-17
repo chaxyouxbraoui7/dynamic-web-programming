@@ -1,290 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Ayoub Chabraoui" content="chaxyouxbraoui7">
-
     <title>Dynamic Web Programming</title>
-
-    <link rel="icon" type="image/jpeg" href="imgs-(xd)/xd.png">
-
     <style>
-        
         :root {
             --primary-color: #0078D7;
-            --dark-bg: rgba(31, 31, 31, 0.8);
-            --text-color: #E0E0E0;
+            --accent-color: #e3f1fd;
+            --bg-light: #f5f7fa;
+            --container-bg: #ffffff;
+            --text-color: #222;
             --hover-color: #005A9E;
         }
-    
         body {
-            font-family: 'Times New Roman', Times, serif;
+            background: var(--bg-light);
+            color: var(--text-color);
+            font-family: 'Segoe UI', 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
-            background: url('imgs-(xd)/bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: var(--text-color);
-            transition: color 0.25s;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
-    
-        header {
-            background-color: var(--dark-bg);
-            color: var(--text-color);
-            padding: 1rem;
+        header, footer {
+            background: var(--primary-color);
+            color: #fff;
             text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            padding: 1.2rem 0;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-    
-        header img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-    
-        header h1 {
-            margin: 0;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-        }
-    
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 5rem auto;
-            padding: 2.5rem;
-            background-color: var(--dark-bg);
-            border-radius: 11px;
-            flex: 1;
-        }
-
-        .p {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            transition: color 0.25s;
-            word-break: break-word;
-        }
-    
-        .folder {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem 0;
-            padding: 1rem;
-            background: rgba(31, 31, 31, 0.9);
-            border-radius: 11px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-    
-        .folder a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            transition: color 0.25s;
-            word-break: break-word;
-        }
-    
         footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--dark-bg);
-            padding: 1rem;
-            border-top: 2px solid var(--primary-color);
-            width: 100%;
+            border-top: 2px solid var(--accent-color);
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            padding: 2rem;
+            background: var(--container-bg);
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 1.5rem;
             text-align: center;
+            letter-spacing: 1px;
         }
-    
-        footer img {
-            width: 40px;
-            height: 40px;
-            margin: 0 0 0.5rem 0;
-            border-radius: 50%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .folder {
+            margin: 1.5rem 0;
+            padding: 1.2rem 1rem;
+            background: var(--accent-color);
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
         }
-    
-        footer p {
-            margin: 0;
-            font-size: clamp(0.8rem, 2vw, 1rem);
-            color: var(--text-color);
+        .folder p {
+            margin: 0 0 0.7rem 0;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
         }
-        
-        header img:hover, footer img:hover {
-            transform: scale(1.2);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        .folder a {
+            display: inline-block;
+            margin: 11px;
+            color: var(--primary-color);
+            background: #fff;
+            padding: 0.35em 0.9em;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+            transition: background 0.2s, color 0.2s;
         }
-        
-        .folder:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-        }
-        
         .folder a:hover {
-            color: var(--hover-color);
+            background: var(--primary-color);
+            color: #fff;
         }
-
-        @media (min-width: 1024px) {
-            header {
-                flex-direction: row;
-                padding: 2rem 3rem;
-            }
-            
-            header img {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .container {
-                width: 100%;
-                max-width: 1600px;
-                padding: 2.5rem;
-            }
-            
-            .folder {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 1.5rem;
-            }
-            
-            footer {
-                flex-direction: row;
-                justify-content: center;
-                padding: 1.25rem;
-            }
-            
-            footer img {
-                width: 50px;
-                height: 50px;
-                margin: 0 1rem 0 0;
-            }
-            
-            .folder a {
-                font-size: 1.25rem;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-                margin: 1rem auto;
-            }
-            
-            .folder {
-                padding: 1.25rem;
-            }
-            
-            footer img {
-                width: 25px;
-                height: 25px;
-            }
-        }
-            
     </style>
-
 </head>
-
 <body>
-
     <header>
-        <img src="imgs-(xd)/`xd.jpg" alt="Left Icon">
         <h1>Dynamic Web Programming - Practical Works</h1>
-        <img src="imgs-(xd)/xd`.jpg" alt="Right Icon">
     </header>
-
     <div class="container">
-             
-        <h1 style="text-align: center;">The Practical Works</h1>
-    
-        <section id="pratical-work-01" class="folder">
-            <p class="p">01 • Practical Work ₁ - HTML</p>
-            <a href="pratical-work-01/schedule.html">practical work¹</a>
+        <h1>The Practical Works</h1>
+        <section class="folder">
+            <p>01 • Practical Work ₁ - HTML</p>
+            <a href="pratical-work-01/schedule_.html">practical work¹</a>
         </section>
-
-        <section id="pratical-work-02" class="folder">
-            <p class="p">02 • Practical Work ₂ - HTML</p>
-            <a href="pratical-work-02/form.html">practical work²</a>
+        <section class="folder">
+            <p>02 • Practical Work ₂ - HTML</p>
+            <a href="pratical-work-02/form_.html">practical work²</a>
         </section>
-
-        <section id="pratical-work-03" class="folder">
-            <p class="p">03 • Practical Work ₃ - HTML & CSS</p>
+        <section class="folder">
+            <p>03 • Practical Work ₃ - HTML & CSS</p>
             <a href="pratical-work-03/main/schedule.html">practical work³</a>
         </section>
-
-        <section id="pratical-work-4" class="folder">
-            <p class="p">04 • Practical Work ₄ - HTML & CSS</p>
+        <section class="folder">
+            <p>04 • Practical Work ₄ - HTML & CSS</p>
             <a href="pratical-work-04/resume.html">practical work⁴</a>
         </section>
-
-        <section id="pratical-work-05" class="folder">
-            <p class="p">05 • Practical Work ₅ - HTML & JS</p>
+        <section class="folder">
+            <p>05 • Practical Work ₅ - HTML & JS</p>
             <a href="pratical-work-05/ex-1/calc_ex_1.html">Ex¹</a>
             <a href="pratical-work-05/ex-2/guess_num_ex_2.html">Ex²</a>
             <a href="pratical-work-05/ex-3/quiz_ex_3.html">Ex³</a>
             <a href="pratical-work-05/pw_5.pdf">Docummentation</a>
         </section>
-
-        <section id="pratical-work-06" class="folder">
-            <p class="p">06 • Practical Work ₆ - HTML & JS</p>
+        <section class="folder">
+            <p>06 • Practical Work ₆ - HTML & JS</p>
             <a href="pratical-work-06/ex-1/dom_ex_1.html">Ex¹</a>
             <a href="pratical-work-06/ex-2/to_do_list_ex_2.html">Ex²</a>
             <a href="pratical-work-06/pw_6.pdf">Docummentation</a>
         </section>
-
-        <section id="pratical-work-07" class="folder">
-            <p class="p">07 • Practical Work ₇ - HTML, CSS, JS & PHP</p>
+        <section class="folder">
+            <p>07 • Practical Work ₇ - HTML, CSS, JS & PHP</p>
             <a href="pratical-work-07/form/form.html">Form</a>
             <a href="pratical-work-07/form-ver.2/form_2.html">Form ver²</a>
-            <a href="pratical-work-07\dwp_practical_work_7.pdf" title="A short summary of the backend of the 7th pratical work with screenshots.">Brief Backend Report</a>
+            <a href="pratical-work-07/dwp_practical_work_7.pdf">Brief Backend Report</a>
             <a href="pratical-work-07/pw_7.pdf">Docummentation</a>
         </section>
-
-        <section id="pratical-work-08" class="folder">
-            <p class="p">08 • Practical Work ₈ - HTML, CSS & PHP</p>
+        <section class="folder">
+            <p>08 • Practical Work ₈ - HTML, CSS & PHP</p>
             <a href="pratical-work-08/ex-1/calculator.html">Ex¹</a>
             <a href="pratical-work-08/ex-2/psswrd.html">Ex²</a>
             <a href="pratical-work-08/ex-3/contact.html">Ex³</a>
             <a href="pratical-work-08/ex-4/login.html">Ex⁴</a>
             <a href="pratical-work-08/ex-5/guestbook.html">Ex⁵</a>
             <a href="pratical-work-08/ex-6/quiz_.html">Ex⁶</a>
-            <a href="pratical-work-08\dwp_practical_work_8.pdf" title="A short summary of the backend of the 7th pratical work with screenshots.">Brief Backend Report</a>
+            <a href="pratical-work-08/dwp_practical_work_8.pdf">Brief Backend Report</a>
             <a href="pratical-work-08/pw_8.pdf">Docummentation</a>
         </section>
-
-        <section id="pratical-work-09" class="folder">
-            <p class="p">09 • Practical Work ₉</p>
-            <p class="p" title="Prof may have gotten it mixed up.">Literally the practical work 7</p>
+        <section class="folder">
+            <p>09 • Practical Work ₉</p>
             <a href="pratical-work-09/README.md">README</a>
             <a href="pratical-work-09/pw_9.pdf">Docummentation</a>
         </section>
-
-        <section id="pratical-work-10" class="folder">
-            <p class="p">10 • Practical Work ₁₀ - HTML, CSS & PHP</p>
+        <section class="folder">
+            <p>10 • Practical Work ₁₀ - HTML, CSS & PHP</p>
             <a href="pratical-work-10/ex-1/login_.html">Ex¹</a>
             <a href="pratical-work-10/ex-2/crud.html">Ex²</a>
             <a href="pratical-work-10/ex-3/game.html">Ex³</a>
-            <a href="pratical-work-10\dwp_practical_work_10.pdf" title="A short summary of the backend of the 7th pratical work with screenshots.">Brief Backend Report</a>
+            <a href="pratical-work-10/dwp_practical_work_10.pdf">Brief Backend Report</a>
             <a href="pratical-work-10/pw_10.pdf">Docummentation</a>
         </section>
-
     </div>
-
     <footer>
-        <img src="imgs-(xd)/xd_.jpg" alt="Footer Icon">
         <p>&copy; 2025 Ayoub Chabraoui | All rights reserved.</p>
     </footer>
-
 </body>
 </html>
